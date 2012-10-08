@@ -87,32 +87,32 @@ its commit history graph (i.e., the graph portion of the output of
 you are on \texttt{alt} branch. Draw its commit history graph.  
  
 The following git commands were used for this exercise:
-\begin{itemize}
-\item mkdir Hw1.git
-\item cd Hw1.git
-\item git init .
-\item vi main.txt % (type A)
-\item git add .
-\item git commit -m "A"
-\item vi main.txt % (type insert line after A and type "B")
-\item git add .
-\item git commit -m "B"
-\item git branch alt 
-\item git checkout alt 
-\item vi main.txt % ( add line after B and type "X")
-\item git add .
-\item git commit -m "X"
-\item git checkout master
-\item vi main.txt % (add line after B and type "C")
-\item git add . 
-\item git commit -m "C"
-\item git merge alt 
-\item vi main.txt % (resolve conflict)
-\item git add .
-\item git -m "merged"
-\item vi main.txt % (type insert line after C and type "D" )
-\item git add .
-\item git commit -m "D"
+
+ mkdir Hw1.git
+ cd Hw1.git
+ git init .
+ vi main.txt % (type A)
+ git add .
+ git commit -m "A"
+ vi main.txt % (type insert line after A and type "B")
+ git add .
+ git commit -m "B"
+ git branch alt 
+ git checkout alt 
+ vi main.txt % ( add line after B and type "X")
+ git add .
+ git commit -m "X"
+ git checkout master
+ vi main.txt % (add line after B and type "C")
+ git add . 
+ git commit -m "C"
+ git merge alt 
+ vi main.txt % (resolve conflict)
+ git add .
+ git -m "merged"
+ vi main.txt % (type insert line after C and type "D" )
+ git add .
+ git commit -m "D"
 
 
 \end{itemize}
