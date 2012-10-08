@@ -88,34 +88,40 @@ you are on \texttt{alt} branch. Draw its commit history graph.
  
 The following git commands were used for this exercise:
 
- mkdir Hw1.git
- cd Hw1.git
- git init .
- vi main.txt % (type A)
+ mkdir Hw1.git\newline
+ cd Hw1.git\newline
+ git init .\newline
+ vi main.txt  (type A)\newline
+ git add . \newline
+ git commit -m "A" \newline
+ vi main.txt  (insert line after A and type "B")
+\newline
+ git add . \newline
+ git commit -m "B"\newline
+ git branch alt \newline
+ git checkout alt \newline
+ vi main.txt ( add line after B and type "X")
+\newline
+ git add . \newline
+ git commit -m "X" \newline
+ git checkout master\newline
+ vi main.txt (add line after B and type "C")
+  \newline
+ git add . \newline 
+ git commit -m "C" \newline
+ git merge alt \newline
+ vi main.txt  (resolve conflict)
+\newline
+ git add .\newline
+ git -m "merged" \newline
+ vi main.txt (insert line after C and type "D" )
+\newline
  git add .
- git commit -m "A"
- vi main.txt % (type insert line after A and type "B")
- git add .
- git commit -m "B"
- git branch alt 
- git checkout alt 
- vi main.txt % ( add line after B and type "X")
- git add .
- git commit -m "X"
- git checkout master
- vi main.txt % (add line after B and type "C")
- git add . 
- git commit -m "C"
- git merge alt 
- vi main.txt % (resolve conflict)
- git add .
- git -m "merged"
- vi main.txt % (type insert line after C and type "D" )
- git add .
+\newline
  git commit -m "D"
 
 
-\end{itemize}
+
 
 
 \vskip.25in
@@ -140,27 +146,27 @@ a txt file for a single (different) stanza,
 \end{itemize}
 
 The following sequence of git commands was used in this exercise:
-\begin{itemize}
-\item mkdir Hw1Prob2.git
-\item cd Hw1Prob2.git 
-\item git init .
-\item git remote add stanza1 git://github.com/nhlee/550400.stanza1.git
-\item git pull stanza1 master
-\item vi main.txt % (make sure it worked)
-\item git add .
-\item git commit -m "stanza1"
-\item git remote add stanza2 git://github.com/nhlee/550400.stanza2.git
-\item pull stanza2 master
-\item vi main.txt % (resolve conflict)
-\item git add .
-\item git commit -m "stanza2 "
-\item git remote add stanza3 git://github.com/nhlee/550400.stanza3.git
-\item git pull stanza3 master
-\item vi main.txt % (resolve conflict)
-\item git add .
-\item git commit -m "stanza3"
 
-\end{itemize}
+mkdir Hw1Prob2.git\newline
+ cd Hw1Prob2.git \newline
+ git init . \newline
+ git remote add stanza1 git://github.com/nhlee/550400.stanza1.git \newline
+git pull stanza1 master\newline
+vi main.txt (make sure it worked) \newline
+git add . \newline
+git commit -m "stanza1" \newline
+git remote add stanza2 git://github.com/nhlee/550400.stanza2.git\newline
+pull stanza2 master\newline
+vi main.txt (resolve conflict)\newline
+git add . \newline
+git commit -m "stanza2 " \newline
+git remote add stanza3 git://github.com/nhlee/550400.stanza3.git\newline
+git pull stanza3 master\newline
+vi main.txt (resolve conflict)\newline
+git add .\newline
+git commit -m "stanza3" \newline
+
+
 
 \newpage
 \noindent\textbf{Problem 3 (40 pts):}
