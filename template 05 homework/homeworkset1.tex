@@ -85,6 +85,38 @@ Suppose that you are currently working on \texttt{master} branch. Draw
 its commit history graph (i.e., the graph portion of the output of
 \verb+git log --graph --oneline+).  Next, assume that 
 you are on \texttt{alt} branch. Draw its commit history graph.  
+ 
+The following git commands were used for this exercise:
+\begin{itemize}
+\item mkdir Hw1.git
+\item cd Hw1.git
+\item git init .
+\item vi main.txt % (type A)
+\item git add .
+\item git commit -m "A"
+\item vi main.txt % (type insert line after A and type "B")
+\item git add .
+\item git commit -m "B"
+\item git branch alt 
+\item git checkout alt 
+\item vi main.txt % ( add line after B and type "X")
+\item git add .
+\item git commit -m "X"
+\item git checkout master
+\item vi main.txt % (add line after B and type "C")
+\item git add . 
+\item git commit -m "C"
+\item git merge alt 
+\item vi main.txt % (resolve conflict)
+\item git add .
+\item git -m "merged"
+\item vi main.txt % (type insert line after C and type "D" )
+\item git add .
+\item git commit -m "D"
+
+
+\end{itemize}
+
 
 \vskip.25in
 \noindent\textbf{Problem 2 (10 pts):}
@@ -105,6 +137,29 @@ a txt file for a single (different) stanza,
 \item after the second and third pull, resolve the merge conflict,
 \item after resolving the third pull merge conflict, push the result
   to your (newly created) remote repository. 
+\end{itemize}
+
+The following sequence of git commands was used in this exercise:
+\begin{itemize}
+\item mkdir Hw1Prob2.git
+\item cd Hw1Prob2.git 
+\item git init .
+\item git remote add stanza1 git://github.com/nhlee/550400.stanza1.git
+\item git pull stanza1 master
+\item vi main.txt % (make sure it worked)
+\item git add .
+\item git commit -m "stanza1"
+\item git remote add stanza2 git://github.com/nhlee/550400.stanza2.git
+\item pull stanza2 master
+\item vi main.txt % (resolve conflict)
+\item git add .
+\item git commit -m "stanza2 "
+\item git remote add stanza3 git://github.com/nhlee/550400.stanza3.git
+\item git pull stanza3 master
+\item vi main.txt % (resolve conflict)
+\item git add .
+\item git commit -m "stanza3"
+
 \end{itemize}
 
 \newpage
