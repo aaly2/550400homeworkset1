@@ -27,6 +27,7 @@ extendedchars=true
 
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \usepackage{graphicx}
+\usepackage{mathtools}
 
 \begin{document}
 
@@ -251,12 +252,34 @@ Answer the following question:
 Is the tennis game fair?
 \end{verse}
 Note that unlike Problem 3, this question is vaguely stated.
-This is intensional, whence to begin, you will first need to clarify
+This is intentional, whence to begin, you will first need to clarify
 what exactly your question is.
 You may use the class discussion on this particular 
 problem, but you \emph{may not} directly refer to our 
 discussion.  Instead, formulate the model carefully but concisely in 
 your own words.   
+The first step to answer this question is to define what a tennis game. My model will be based on my perception of the rules of the tennis. I have to admit that I am not entirely clear on the details of the rules of tennis. My basic understanding is depicted in the diagram below:
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=\textwidth]{tennis.jpg}
+    \end{center}
+    \caption{My understanding of a tennis game}
+    \label{fig:tennis}
+\end{figure}
+\newline
+Based on this understanding, each game contains $N$ number of sets and each set contains $J$ number of matches.  I will define the question specifically to state “Is the game of tennis fair?” to “Does starting a match first give you an advantage in the greater scheme of one game?” If the answer is yes then the game is unfair. If it is no then the model is inconclusive, since it only answers one component of the game. The reason why I used starting first as the variable to test for is the fact that we do not have any power over the specific endogenous parameters such as player’s mood, psyche, skill, etc. I will assume that both players are the same in terms of skill level. In terms of exogenous variables like weather, crowd cheering, and other external factors that affect the game, I will ignore those as well for simplicity. 
+\newline
+I will assume that starting or serving first gives that player an advantage in the specific match. The players will also alternate who starts first for each match. To model the increased probability of winning a round, I will use an imbalanced coin model. In this game we have Player A and Player B. If Player A starts first the probability of A winning increases and the probability of B winning decreases. The exact numbers will not be determined for the probability and will be determined after experimentation. 
+\newline
+Let us focus on Player A. To win, Player A needs to win the majority of sets to win the game. This is done by winning the majority of matches in each set. The number of matches and sets played is determined by the score. If Player A starts every time then Player A would have a greater chance of winning the game. We can use the following equation to determine whether or not a player has an advantage. If the ratio of probabilities of the Player A:  PlayerB winning is not equal to 1 then the game is biased. 
+\newline
+ Ratio= P (Player A wins set $|$ starts first)$/$P(player B wins set $|$ starts first)$
+\newline
+ P(Player X wins  set | start first)$=$ P(greater side of biased coin)^n$ , where $n$ is the number of times Player X starts first\newline
+\newline
+Because we are modeling the match using a biased coin, we find that the probability of winning a set for a single player is unaffected if the number of matches is even. This makes sense because Player A and B get the same advantage. However, if the number of matches is odd, then the player that starts first will gain a greater advantage, since that player will start first more times than the other player. The equation will not equal one. \newline
+\newline
+According to the model, tennis is unfair sometimes. The usefulness of the model can be determined by running a Monte Carlo simulation using a computer and a game console system. 
 
 \vskip0.25in
 \noindent\textbf{Final Remarks about Problem 3 \& Problem 4:} 
